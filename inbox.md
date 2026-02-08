@@ -1,16 +1,3 @@
-# Inbox
-
-Single source of truth.
-Raw notes only. No cleanup. No perfection.
-
----
-
-topic:
-tool:
-type:
-level:
-status:
-
 ---
 topic: Git
 tool: GitHub
@@ -22,7 +9,7 @@ status: raw
 Created a new repository using GitHub UI.
 
 Steps:
-- Click “New repository”
+- Click "New repository"
 - Choose name
 - Enable README
 - Create repo
