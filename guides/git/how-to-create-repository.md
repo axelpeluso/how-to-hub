@@ -1,19 +1,14 @@
-# How to create a GitHub repository
+# How to create a new GitHub repository using the GitHub UI
 
 ## Goal
-Create a new GitHub repository using the web UI.
-
-## Prerequisites
-- GitHub account
+Create a new GitHub repository through the web interface.
 
 ## Steps
-1. Go to GitHub and click **New repository**
-2. Choose a repository name
-3. Enable **README**
-4. Click **Create repository**
-
-## Common errors
-- Creating a repo without README leads to an empty setup
+1. Click **New repository** in GitHub.
+2. Choose a repository name.
+3. Enable **README**.
+4. Create the repository.
 
 ## Notes
-- Public vs private doesn’t matter at the start
+- Adding a README avoids issues with an empty repository.
+- Choosing public or private does not matter at the start.
