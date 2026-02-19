@@ -1,0 +1,119 @@
+How to create an Azure Resource Group, Virtual Machine, and Web App, then deploy a ZIP application
+Goal
+
+Create a resource group, deploy a virtual machine (VM), deploy a web app, configure it, and deploy an application using a ZIP file with environment variables and startup settings.
+
+Prerequisites
+
+The application ZIP file downloaded locally.
+
+Steps
+Part 1: Create a Resource Group and Virtual Machine
+
+Go to the Azure portal.
+
+Create a Resource Group (a container that holds related resources).
+
+After the resource group is created, confirm it is empty.
+
+Create a Virtual Machine inside that resource group.
+
+In the VM creation form, set:
+
+Virtual machine name
+
+Region
+
+Configure inbound ports:
+
+Do not leave inbound ports open (to avoid hackers).
+
+(Optional) Add additional items/services to the VM as needed.
+
+Select Review + create.
+
+Wait for:
+
+“Deployment in progress”
+
+“Deployment is complete”
+
+Go to the resource group’s Resources list and confirm the VM appears.
+
+Note that creating a VM automatically creates multiple billable services.
+
+If you are not using the VM, turn it off (you pay for CPUs while services are running).
+
+Part 2: Create a Web App
+
+Create a Web App.
+
+In the Web App setup, configure:
+
+Subscription
+
+Resource group
+
+Web app name
+
+Set Publish to Code.
+
+Select Python as the language.
+
+Start the web app deployment.
+
+Wait for:
+
+“Deployment in progress”
+
+“Deployment succeeded”
+
+Part 3: Configure the Web App and Deploy a ZIP File
+
+Go back to the Resource Group containing the VM and Web App.
+
+Select your Web App.
+
+Go to Settings → Environment variables.
+
+Create a new environment variable:
+
+Name: SCM_DO_BUILD_DURING_DEPLOYMENT
+
+Value: true
+
+Select Apply.
+
+Confirm and apply the changes.
+
+Enable Auto-start (if available).
+
+Go to Settings → Configuration (Stack settings).
+
+Add a Startup command.
+
+Select Apply.
+
+Ensure your application ZIP file is downloaded locally.
+
+In the Web App, go to Deployment.
+
+Open Advanced Tools.
+
+Open File Manager.
+
+Navigate to the site folder.
+
+Upload the ZIP file into the site directory.
+
+Notes
+
+A resource group starts empty until you add resources.
+
+Creating a VM generates multiple billable resources automatically.
+
+VMs incur ongoing costs while running.
+
+Setting SCM_DO_BUILD_DURING_DEPLOYMENT=true ensures the app is built during ZIP deployment.
+
+The application is created from the uploaded ZIP file during deployment.
